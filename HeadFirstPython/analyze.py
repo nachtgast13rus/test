@@ -1,6 +1,3 @@
-import text
-
-
 def count_syllables(words):
     count = 0
 
@@ -39,11 +36,6 @@ def count_sentences(text):
 
 
 def compute_readability(text):
-    total_word = 0
-    total_sentences = 0
-    total_syllables = 0
-    scores = 0
-
     total_word = len(text.split())
     total_sentences = count_sentences(text)
     total_syllables = count_syllables(text)
@@ -53,4 +45,9 @@ def compute_readability(text):
               - 84.6 * (total_syllables / total_word))
 
     print(scores)
-compute_readability(text.text)
+
+
+if __name__ == "__main__":
+    import text
+
+    compute_readability(text.text)
