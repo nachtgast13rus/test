@@ -15,12 +15,33 @@ def add_user():
     users[name] = attributes
 
 
+def average_age():
+    global users
+    count = 0
+    for name in users:
+        user = users[name]
+        count += user["Age"]
+    print(f"Average age is {count / len(users)}")
+
+
+def count_min_friends():
+    global users
+    max_friends = 1000
+    for friend in users:
+        user = users[friend]
+        friends = user["Friends"]
+        if len(friends) < max_friends:
+            max_friends = len(friends)
+            most_antisocial = friend
+    print(most_antisocial)
+
+
 users = {}
-choice = input("Press 1 to add new user ")
-if choice == "1":
-    add_user()
-count = 0
-for name in users:
-    user = users[name]
-    count += user["Age"]
-print(count)
+while True:
+    choice = input("Press 1 to add new user ")
+    if choice == "1":
+        add_user()
+    else:
+        break
+average_age()
+count_min_friends()
