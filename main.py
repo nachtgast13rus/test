@@ -9,3 +9,5 @@ for values in my_sklad.values():
     print(values)
 for items in my_sklad.items():
     print(items)
+if isinstance(my_sklad['Evgen'], int):
+    print("Helo")
