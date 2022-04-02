@@ -16,9 +16,22 @@ def length():
     print([len(word) for word in words])
 
 
+def word_list():
+    """
+    Create a list of words from the text below that are shorter than or equal to the input value. Print the new list.
+    :return:
+    """
+    text = [["Glitch", "is", "a", "minor", "problem", "that", "causes", "a", "temporary", "setback"],
+            ["Ephemeral", "lasts", "one", "day", "only"],
+            ["Accolade", "is", "an", "expression", "of", "praise"]]
+    lengths = int(input())
+    print([word for lists in text for word in lists if len(word) <= lengths])
+
+
 def main():
     threefold()
     length()
+    word_list()
 
 
 if __name__ == "__main__":
