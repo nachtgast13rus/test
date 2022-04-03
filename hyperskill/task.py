@@ -28,10 +28,24 @@ def word_list():
     print([word for lists in text for word in lists if len(word) <= lengths])
 
 
+def tennis_tournament():
+    """
+    Several warm-up matches have been played at the tennis tournament. You have data on the victories and losses of
+    some players. Save the names of the winners to a list and calculate the total number of victories.
+    :return:
+    """
+    num = int(input())
+    members = [input().split() for _ in range(num)]
+    my_list = [result[0] for result in members if result[1] == 'win']
+    print(my_list)
+    print(len(my_list))
+
+
 def main():
-    threefold()
-    length()
-    word_list()
+    # threefold()
+    # length()
+    # word_list()
+    tennis_tournament()
 
 
 if __name__ == "__main__":
