@@ -86,14 +86,15 @@ def prime_numbers():
 
 
 def main():
-    threefold()
-    length()
-    word_list()
-    tennis_tournament()
-    latin_equivalents()
-    straight_a()
-    fix_the_mistakes()
-    prime_numbers()
+    # threefold()
+    # length()
+    # word_list()
+    # tennis_tournament()
+    # latin_equivalents()
+    # straight_a()
+    # fix_the_mistakes()
+    # prime_numbers()
+
 
 
 if __name__ == "__main__":
