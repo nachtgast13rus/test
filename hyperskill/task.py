@@ -118,6 +118,27 @@ def catching_built_in_exceptions():
         print("The Error!")
 
 
+def tourists():
+    # work with these variables
+    eugene = set(input().split())
+    rose = set(input().split())
+
+    print(eugene ^ rose)
+
+    # Another solution 1
+    # print(eugene.symmetric_difference(rose))
+
+    # Another solution 2
+    # eugene.symmetric_difference_update(rose)
+    # print(eugene)
+
+    # Another solution 3
+    # rose ^= eugene
+    # print(rose)
+
+    # Another solution 4
+    # print((eugene | rose) - (eugene & rose))
+
 
 def main():
     # threefold()
@@ -129,7 +150,9 @@ def main():
     # fix_the_mistakes()
     # prime_numbers()
     # implementing_logic()
-    catching_built_in_exceptions()
+    # catching_built_in_exceptions()
+    tourists()
+
 
 if __name__ == "__main__":
     main()
