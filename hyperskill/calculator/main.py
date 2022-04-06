@@ -21,8 +21,10 @@ operations = {
 
 memory = 0.0
 
+
 def is_one_digit(v):
-    return v > -10 and v < 10 and v.is_integer()
+    return -10 < v < 10 and v.is_integer()
+
 
 def check(v1, v2, v3):
     result = ''
@@ -32,6 +34,7 @@ def check(v1, v2, v3):
     if result != '':
         result = msg[9] + result
         print(result)
+
 
 def save_confirm(memory, result):
     if is_one_digit(result):
@@ -47,6 +50,7 @@ def save_confirm(memory, result):
                 return memory
     else:
         return result
+
 
 while True:
     print(msg[0])
