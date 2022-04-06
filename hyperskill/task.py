@@ -85,6 +85,40 @@ def prime_numbers():
     prime_numbers = [x for x in range(2, 1000) if all(x % y != 0 for y in range(2, x))]
 
 
+def implementing_logic():
+    """
+    Advanced input() handling is used to read input directly into several variables, e. g.,
+    name, surname = input().split(), but a user still can enter more or fewer words.
+    In this task, you have to make sure that the user entered the necessary amount of words and...
+    If there are more or fewer words in the input, print an error: "You need to enter exactly 2 words. Try again!"
+    If everything's good, greet the user personally.
+
+    :return:
+    """
+    try:
+        name, surname = input().split()
+    except ValueError:
+        print("You need to enter exactly 2 words. Try again!")
+    else:
+        print(f"Welcome to our party, {name} {surname}")
+
+
+def catching_built_in_exceptions():
+    """
+    You know how to catch the built-in exceptions. Right now, try to read two numbers (a, b) and find the result of
+    their division. Your main task it to catch the ZeroDivisionError. If there's an error, print the following
+    message: The Error!. Otherwise, print the result of the division.
+    :return:
+    """
+    a = int(input())
+    b = int(input())
+    try:
+        print(a / b)
+    except ZeroDivisionError:
+        print("The Error!")
+
+
+
 def main():
     # threefold()
     # length()
@@ -94,8 +128,8 @@ def main():
     # straight_a()
     # fix_the_mistakes()
     # prime_numbers()
-
-
+    # implementing_logic()
+    catching_built_in_exceptions()
 
 if __name__ == "__main__":
     main()
