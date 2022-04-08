@@ -1,1 +1,1 @@
-
+print(eval(input()))
