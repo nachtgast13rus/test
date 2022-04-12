@@ -118,6 +118,15 @@ def catching_built_in_exceptions():
         print("The Error!")
 
 
+def word_constructor():
+    first_word = input()
+    second_word = input()
+    for f_el, s_el in zip(first_word, second_word):
+        print(f_el + s_el, end='')
+
+    # print("".join([x + y for x, y in zip(input(), input())]))
+
+
 def tourists():
     # work with these variables
     eugene = set(input().split())
@@ -151,7 +160,8 @@ def main():
     # prime_numbers()
     # implementing_logic()
     # catching_built_in_exceptions()
-    tourists()
+    # tourists()
+    word_constructor()
 
 
 if __name__ == "__main__":
