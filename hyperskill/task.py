@@ -1,3 +1,6 @@
+from string import ascii_lowercase
+
+
 def threefold():
     """
     Print a list of numbers from 1 to 1000 that can be divided by 3.
@@ -149,6 +152,44 @@ def tourists():
     # print((eugene | rose) - (eugene & rose))
 
 
+def double_dict():
+    double_alphabet = {letter: letter * 2 for letter in ascii_lowercase}
+
+
+def upper_lower():
+    some_iterable = "Great loves too must be endured."  # input().split()
+    my_dict = {el.upper(): el.lower() for el in some_iterable.split(' ')}
+    print(my_dict)
+
+
+def select_dates():
+    potential_dates = [{"name": "Julia", "gender": "female", "age": 29,
+                        "hobbies": ["jogging", "music"], "city": "Hamburg"},
+                       {"name": "Sasha", "gender": "male", "age": 18,
+                        "hobbies": ["rock music", "art"], "city": "Berlin"},
+                       {"name": "Maria", "gender": "female", "age": 35,
+                        "hobbies": ["art"], "city": "Berlin"},
+                       {"name": "Daniel", "gender": "non-conforming", "age": 50,
+                        "hobbies": ["boxing", "reading", "art"], "city": "Berlin"},
+                       {"name": "John", "gender": "male", "age": 41,
+                        "hobbies": ["reading", "alpinism", "museums"], "city": "Munich"}]
+    my_list = []
+    for el in potential_dates:
+        if el["age"] > 30 and "art" in el["hobbies"] and el["city"] == "Berlin":
+            my_list.append(el["name"])
+    print(', '.join(my_list))
+
+
+def extreme_points():
+    my_dict = {"a": 43, "b": 1233, "c": 8}
+    sorted_tuple = sorted(my_dict.items(), key=lambda x: x[1])
+    my_dict = dict(sorted_tuple)
+    my_list = list(my_dict)
+    print(f"min: {my_list[0]}\nmax: {my_list[-1]}")
+    # print("min:", min(test_dict, key=test_dict.get))
+    # print("max:", max(test_dict, key=test_dict.get))
+
+
 def main():
     # threefold()
     # length()
@@ -161,7 +202,11 @@ def main():
     # implementing_logic()
     # catching_built_in_exceptions()
     # tourists()
-    word_constructor()
+    # word_constructor()
+    # double_dict()
+    # upper_lower()
+    # select_dates()
+    extreme_points()
 
 
 if __name__ == "__main__":

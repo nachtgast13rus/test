@@ -37,12 +37,14 @@
 #     {"day": "Saturday", "distance": 1000},
 #     {"day": "Sunday", "distance": 5600}]
 # print(sum(walk.get('distance') for walk in walks) // len(walks))
-result = 0
-cards = {"Ace": 14, "King": 13, "Queen": 12, "Jack": 11}
-hand = [input() for _ in range(6)]
-for i in hand:
-    if i in cards:
-        result += cards[i]
-    else:
-        result += int(i)
-print(result / 6)
+# result = 0
+# cards = {"Ace": 14, "King": 13, "Queen": 12, "Jack": 11}
+# hand = [input() for _ in range(6)]
+# for i in hand:
+#     if i in cards:
+#         result += cards[i]
+#     else:
+#         result += int(i)
+# print(result / 6)
+my_dict = {"a": 43, "b": 1233, "c": 8}
+print(min(my_dict, key=my_dict.get()))
