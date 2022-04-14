@@ -46,5 +46,8 @@
 #     else:
 #         result += int(i)
 # print(result / 6)
-my_dict = {"a": 43, "b": 1233, "c": 8}
-print(min(my_dict, key=my_dict.get()))
+# my_dict = {"a": 43, "b": 1233, "c": 8}
+# print(min(my_dict, key=my_dict.get()))
+with open('years.txt', 'w', encoding='utf-8') as f:
+    for i in range(2010, 2020):
+        f.write(str(i) + " ")
